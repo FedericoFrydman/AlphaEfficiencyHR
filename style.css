@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --color-yellow: #ffd900;
+  --color-purple: #dd71c6;
+  --color-blue: #73c3f4;
+  --color-grey: #f9f9f9;
+  --color-primary-text: #333333;
+  --color-blue-text: #0083d3;
+  --color-white: #ffffff;
+
+  --primary-font-family: 'Montserrat', sans-serif;
+  --secondary-font-family: 'Libre Baskerville', serif;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary-text);
+}
+
+.flexmenu {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-primary-text);
+  line-height: 1.4em;
+  position: fixed;
+}
+.flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+.menu {
+  display: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 15%;
+  font-weight: bold;
+}
+.menu:first-child {
+  display: inline-flex;
+  justify-content: left;
+  width: 80%;
+  margin-left: 0;
+  margin-right: auto;
+}
+.menu a {
+  color: var(--color-primary-text);
+  text-decoration: none;
+  padding: 0 0.5em;
+  font-size: 14px;
+  font-weight: 400;
+}
+.mobile-menu {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1.2em;
+}
+.menu-icon {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: inline-flex;
+}
+
+.main-section {
+  background-color: var(--color-grey);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-content {
+  flex: 1;
+  padding-right: 20px;
+  font-family: var(--secondary-font-family);
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--primary-font-family);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+}
+
+.countdown-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.countdown-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-section span {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.faq-section {
+  background-color: var(--color-white);
+  padding: 40px;
+  text-align: center;
+}
+.faq-section h1 {
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-question::after {
+  content: '>';
+  color: var(--color-purple);
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(270deg);
+}
+.faq-answer {
+  display: none;
+  margin-top: 5px;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .flex {
+    flex-direction: row;
+  }
+  .menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    font-weight: bold;
+  }
+}
