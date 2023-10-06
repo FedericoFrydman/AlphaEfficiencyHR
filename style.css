@@ -512,3 +512,94 @@ button {
     align-self: center;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .flexmenu {
+    padding: 0 10px;
+  }
+  .flex .menu.show {
+    background-color: white;
+  }
+  .menu img {
+    width: 70%;
+  }
+  .mobile-menu {
+    right: 2em;
+  }
+  .main-section {
+    height: auto;
+    background-color: transparent;
+  }
+  .main-section::before {
+    width: 51%;
+    height: 100%;
+    left: 50%;
+  }
+  .main-section::after {
+    display: none;
+  }
+  .content {
+    padding: 0 10%;
+    flex-direction: column;
+  }
+  .left-content {
+    margin: 0;
+    padding: 0;
+  }
+  .left-content h1 {
+    font-size: 26px;
+    line-height: 48px;
+    text-align: center;
+    padding-top: 35px;
+    max-width: 100%;
+  }
+  .left-content p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 265px;
+    max-width: 100%;
+  }
+  .left-content button {
+    font-size: 12px;
+    line-height: 15px;
+    width: 75%;
+    align-self: center;
+    margin: 28px 0;
+  }
+  .right-content {
+    position: absolute;
+    top: 240px;
+  }
+  .right-content p {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .right-content .text {
+    font-size: 8px;
+    line-height: 14px;
+  }
+  .right-content .num {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .faq-section {
+    padding: 0 10%;
+  }
+  .faq-section::before {
+    display: none;
+  }
+  .faq-section::after {
+    display: none;
+  }
+  .faq-section h2 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .faq-question {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .faq-section button {
+    display: none;
+  }
+}
